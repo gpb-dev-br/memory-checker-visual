@@ -28,7 +28,7 @@ while True:
     free_gb = memory.available / (1024 ** 3)
     percent = memory.percent
     
-    #relogio
+    #visual relogio
     fig_gauge = go.Figure(go.Indicator(
         mode = "gauge+number",
         value = percent,
