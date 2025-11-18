@@ -6,16 +6,16 @@ import uuid
 
 st.set_page_config(page_title="Monitor de Memória", layout="wide")
 
-st.title("Monitoramento de Recursos - Visual")
+st.title("Monitoramento de Memória")
 
 col1, col2 = st.columns(2)
 
 with col1:
-    st.subheader("Velocímetro de Uso")
+    st.subheader("Relógio de Uso")
     gauge_placeholder = st.empty()
 
 with col2:
-    st.subheader("Distribuição (Rosca)")
+    st.subheader("Gráfico de Distribuição")
     donut_placeholder = st.empty()
 
 metrics_placeholder = st.empty()
@@ -28,7 +28,7 @@ while True:
     free_gb = memory.available / (1024 ** 3)
     percent = memory.percent
     
-    #velocimetro
+    #relogio
     fig_gauge = go.Figure(go.Indicator(
         mode = "gauge+number",
         value = percent,
